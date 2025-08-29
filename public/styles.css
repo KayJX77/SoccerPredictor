@@ -1,0 +1,139 @@
+/* Custom styles for Synapse Soccer Prophet */
+.nav-tab {
+    @apply px-6 py-3 text-white font-semibold transition-colors duration-200 border-b-4 border-transparent;
+}
+
+.nav-tab:hover {
+    @apply bg-purple-700 border-purple-300;
+}
+
+.nav-tab.active {
+    @apply bg-purple-800 border-white;
+}
+
+.tab-content {
+    @apply hidden;
+}
+
+.tab-content.active {
+    @apply block;
+}
+
+.match-card {
+    @apply bg-white rounded-lg shadow-lg p-6 transition-transform duration-200;
+}
+
+.match-card:hover {
+    @apply transform scale-105;
+}
+
+.team-logo {
+    @apply w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 font-bold;
+}
+
+.odds-badge {
+    @apply bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold;
+}
+
+.prediction-badge {
+    @apply bg-green-500 text-white px-2 py-1 rounded text-xs font-bold;
+}
+
+.neural-network {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+        radial-gradient(2px 2px at 40px 70px, #fff, transparent),
+        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+        radial-gradient(1px 1px at 130px 80px, #fff, transparent),
+        radial-gradient(2px 2px at 160px 30px, #fff, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+}
+
+.sponsors-section {
+    @apply border-t border-purple-700;
+}
+
+.sponsor-logo {
+    @apply text-white font-bold text-lg;
+}
+
+.league-card {
+    @apply bg-white rounded-lg shadow-lg p-4 text-center transition-transform duration-200;
+}
+
+.league-card:hover {
+    @apply transform scale-105;
+}
+
+.player-card {
+    @apply bg-white rounded-lg shadow-lg p-4 transition-transform duration-200;
+}
+
+.player-card:hover {
+    @apply transform scale-105;
+}
+
+.standings-table {
+    @apply w-full;
+}
+
+.standings-table th {
+    @apply bg-purple-600 text-white px-4 py-3 text-left font-semibold;
+}
+
+.standings-table td {
+    @apply px-4 py-3 border-b border-gray-200;
+}
+
+.standings-table tbody tr:hover {
+    @apply bg-gray-50;
+}
+
+/* Loading animation */
+.loading {
+    @apply animate-pulse;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-tab {
+        @apply px-3 py-2 text-sm;
+    }
+    
+    .hero-section h2 {
+        @apply text-2xl;
+    }
+    
+    .hero-section h3 {
+        @apply text-lg;
+    }
+    
+    .hero-section h4 {
+        @apply text-base;
+    }
+}
+
+/* Animation for match cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.match-card {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(45deg, #8b5cf6, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapse Soccer Prophet - Football Prediction & Analysis Suite</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 min-h-screen">
+    <div id="app">
+        <!-- Header -->
+        <header class="bg-white shadow-lg">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <div class="synapse-logo">
+                            <svg width="50" height="50" viewBox="0 0 100 100" class="text-purple-600">
+                                <circle cx="20" cy="20" r="8" fill="currentColor"/>
+                                <circle cx="50" cy="30" r="6" fill="currentColor"/>
+                                <circle cx="80" cy="20" r="8" fill="currentColor"/>
+                                <circle cx="35" cy="60" r="7" fill="currentColor"/>
+                                <circle cx="65" cy="70" r="6" fill="currentColor"/>
+                                <path d="M20 20 L50 30 M50 30 L80 20 M50 30 L35 60 M35 60 L65 70" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-bold text-purple-600">SYNAPSE</h1>
+                            <p class="text-sm text-gray-600">SOCCER PROPHET</p>
+                            <p class="text-xs text-gray-500">Football Prediction & Analysis Suite</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="bg-purple-600">
+                <div class="container mx-auto px-4">
+                    <div class="flex space-x-0">
+                        <button class="nav-tab active" data-tab="predictions">PREDICTIONS</button>
+                        <button class="nav-tab" data-tab="leagues">LEAGUES</button>
+                        <button class="nav-tab" data-tab="standings">STANDINGS</button>
+                        <button class="nav-tab" data-tab="players">PLAYER STATS</button>
+                        <button class="nav-tab" data-tab="matches">MY MATCHES</button>
+                        <button class="nav-tab" data-tab="calculators">CALCULATORS</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-8">
+            <!-- Hero Section -->
+            <div class="hero-section mb-8">
+                <div class="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg p-8 text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h2 class="text-4xl font-bold mb-2">HYBRID A.I. DRIVEN</h2>
+                        <h3 class="text-2xl mb-4">Mathematical</h3>
+                        <h4 class="text-xl">FOOTBALL PREDICTION</h4>
+                    </div>
+                    <div class="absolute inset-0 opacity-20">
+                        <div class="neural-network"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="predictions-content" class="tab-content active">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-bold text-white mb-4">FEATURED</h3>
+                    <div id="featured-matches" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <!-- Featured matches will be loaded here -->
+                    </div>
+                </div>
+                
+                <div>
+                    <div id="all-matches" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <!-- All matches will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="leagues-content" class="tab-content">
+                <h3 class="text-2xl font-bold text-white mb-4">LEAGUES</h3>
+                <div id="leagues-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Leagues will be loaded here -->
+                </div>
+            </div>
+
+            <div id="standings-content" class="tab-content">
+                <h3 class="text-2xl font-bold text-white mb-4">STANDINGS</h3>
+                <div id="standings-table" class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <!-- Standings will be loaded here -->
+                </div>
+            </div>
+
+            <div id="players-content" class="tab-content">
+                <h3 class="text-2xl font-bold text-white mb-4">PLAYER STATISTICS</h3>
+                <div id="players-stats" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Player stats will be loaded here -->
+                </div>
+            </div>
+
+            <div id="matches-content" class="tab-content">
+                <h3 class="text-2xl font-bold text-white mb-4">MY MATCHES</h3>
+                <div class="bg-white rounded-lg p-8 text-center">
+                    <i class="fas fa-bookmark text-6xl text-gray-300 mb-4"></i>
+                    <p class="text-gray-600">No saved matches yet. Browse predictions and save your favorites.</p>
+                </div>
+            </div>
+
+            <div id="calculators-content" class="tab-content">
+                <h3 class="text-2xl font-bold text-white mb-4">CALCULATORS</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg p-6">
+                        <h4 class="text-lg font-bold mb-4">Odds Calculator</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Stake Amount</label>
+                                <input type="number" id="stake" class="w-full p-2 border rounded" placeholder="100">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-1">Odds</label>
+                                <input type="number" id="odds" class="w-full p-2 border rounded" placeholder="1.85" step="0.01">
+                            </div>
+                            <button onclick="calculateWinnings()" class="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700">Calculate</button>
+                            <div id="calculator-result" class="text-lg font-bold text-purple-600"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sponsors Section -->
+        <div class="sponsors-section py-6">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-center items-center space-x-8 opacity-50">
+                    <div class="sponsor-logo">DUNLOP</div>
+                    <div class="sponsor-logo">GOODYEAR</div>
+                    <div class="sponsor-logo">PIRELLI</div>
+                    <div class="sponsor-logo">BRIDGESTONE</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-purple-900 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div>
+                        <h5 class="font-bold mb-3">INFORMATION</h5>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:text-purple-300">CONTACT</a></li>
+                            <li><a href="#" class="hover:text-purple-300">SITEMAP</a></li>
+                            <li><a href="#" class="hover:text-purple-300">LEGAL NOTICE</a></li>
+                            <li><a href="#" class="hover:text-purple-300">TERMS AND CONDITIONS</a></li>
+                            <li><a href="#" class="hover:text-purple-300">ABOUT US</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-bold mb-3">OUR OFFERS</h5>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:text-purple-300">NEW PRODUCTS</a></li>
+                            <li><a href="#" class="hover:text-purple-300">TOP SELLERS</a></li>
+                            <li><a href="#" class="hover:text-purple-300">SPECIALS</a></li>
+                            <li><a href="#" class="hover:text-purple-300">MANUFACTURERS</a></li>
+                            <li><a href="#" class="hover:text-purple-300">SUPPLIERS</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-bold mb-3">YOUR ACCOUNT</h5>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:text-purple-300">YOUR ACCOUNT</a></li>
+                            <li><a href="#" class="hover:text-purple-300">PERSONAL INFORMATION</a></li>
+                            <li><a href="#" class="hover:text-purple-300">ADDRESSES</a></li>
+                            <li><a href="#" class="hover:text-purple-300">DISCOUNT</a></li>
+                            <li><a href="#" class="hover:text-purple-300">ORDER HISTORY</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-bold mb-3">FOLLOW US</h5>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-400 hover:text-blue-300"><i class="fab fa-facebook-f"></i> FACEBOOK</a>
+                        </div>
+                        <div class="mt-2">
+                            <a href="#" class="text-blue-400 hover:text-blue-300"><i class="fab fa-twitter"></i> TWITTER</a>
+                        </div>
+                        <div class="mt-2">
+                            <a href="#" class="text-red-400 hover:text-red-300"><i class="fab fa-youtube"></i> RSS</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-purple-800 mt-6 pt-4 text-center text-sm">
+                    © 2025 Powered by PrestaShop™ All rights reserved
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

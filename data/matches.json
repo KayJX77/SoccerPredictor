@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "homeTeam": "Manchester City",
+        "awayTeam": "Liverpool",
+        "date": "2025-08-30",
+        "time": "15:00",
+        "league": "Premier League",
+        "odds": "1.85",
+        "prediction": "Home Win",
+        "confidence": 78,
+        "featured": true
+    },
+    {
+        "id": 2,
+        "homeTeam": "Barcelona",
+        "awayTeam": "Real Madrid",
+        "date": "2025-08-30",
+        "time": "20:00",
+        "league": "La Liga",
+        "odds": "2.10",
+        "prediction": "Draw",
+        "confidence": 65,
+        "featured": true
+    },
+    {
+        "id": 3,
+        "homeTeam": "Bayern Munich",
+        "awayTeam": "Borussia Dortmund",
+        "date": "2025-08-31",
+        "time": "17:30",
+        "league": "Bundesliga",
+        "odds": "1.65",
+        "prediction": "Home Win",
+        "confidence": 82,
+        "featured": true
+    },
+    {
+        "id": 4,
+        "homeTeam": "Juventus",
+        "awayTeam": "AC Milan",
+        "date": "2025-08-31",
+        "time": "19:45",
+        "league": "Serie A",
+        "odds": "1.95",
+        "prediction": "Away Win",
+        "confidence": 71,
+        "featured": true
+    },
+    {
+        "id": 5,
+        "homeTeam": "Arsenal",
+        "awayTeam": "Chelsea",
+        "date": "2025-09-01",
+        "time": "16:30",
+        "league": "Premier League",
+        "odds": "2.25",
+        "prediction": "Over 2.5 Goals",
+        "confidence": 69,
+        "featured": false
+    },
+    {
+        "id": 6,
+        "homeTeam": "PSG",
+        "awayTeam": "Marseille",
+        "date": "2025-09-01",
+        "time": "21:00",
+        "league": "Ligue 1",
+        "odds": "1.75",
+        "prediction": "Home Win",
+        "confidence": 76,
+        "featured": false
+    },
+    {
+        "id": 7,
+        "homeTeam": "Atletico Madrid",
+        "awayTeam": "Sevilla",
+        "date": "2025-09-02",
+        "time": "18:00",
+        "league": "La Liga",
+        "odds": "1.90",
+        "prediction": "Under 2.5 Goals",
+        "confidence": 63,
+        "featured": false
+    },
+    {
+        "id": 8,
+        "homeTeam": "Inter Milan",
+        "awayTeam": "Napoli",
+        "date": "2025-09-02",
+        "time": "20:45",
+        "league": "Serie A",
+        "odds": "2.05",
+        "prediction": "Draw",
+        "confidence": 58,
+        "featured": false
+    }
+]

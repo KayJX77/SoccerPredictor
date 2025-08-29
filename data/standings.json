@@ -1,0 +1,98 @@
+[
+    {
+        "position": 1,
+        "name": "Manchester City",
+        "played": 5,
+        "won": 4,
+        "drawn": 1,
+        "lost": 0,
+        "goalsFor": 12,
+        "goalsAgainst": 3,
+        "goalDifference": 9,
+        "points": 13
+    },
+    {
+        "position": 2,
+        "name": "Arsenal",
+        "played": 5,
+        "won": 4,
+        "drawn": 0,
+        "lost": 1,
+        "goalsFor": 11,
+        "goalsAgainst": 5,
+        "goalDifference": 6,
+        "points": 12
+    },
+    {
+        "position": 3,
+        "name": "Liverpool",
+        "played": 5,
+        "won": 3,
+        "drawn": 2,
+        "lost": 0,
+        "goalsFor": 10,
+        "goalsAgainst": 4,
+        "goalDifference": 6,
+        "points": 11
+    },
+    {
+        "position": 4,
+        "name": "Chelsea",
+        "played": 5,
+        "won": 3,
+        "drawn": 1,
+        "lost": 1,
+        "goalsFor": 9,
+        "goalsAgainst": 6,
+        "goalDifference": 3,
+        "points": 10
+    },
+    {
+        "position": 5,
+        "name": "Manchester United",
+        "played": 5,
+        "won": 3,
+        "drawn": 0,
+        "lost": 2,
+        "goalsFor": 8,
+        "goalsAgainst": 7,
+        "goalDifference": 1,
+        "points": 9
+    },
+    {
+        "position": 6,
+        "name": "Tottenham",
+        "played": 5,
+        "won": 2,
+        "drawn": 2,
+        "lost": 1,
+        "goalsFor": 7,
+        "goalsAgainst": 5,
+        "goalDifference": 2,
+        "points": 8
+    },
+    {
+        "position": 7,
+        "name": "Newcastle",
+        "played": 5,
+        "won": 2,
+        "drawn": 1,
+        "lost": 2,
+        "goalsFor": 6,
+        "goalsAgainst": 6,
+        "goalDifference": 0,
+        "points": 7
+    },
+    {
+        "position": 8,
+        "name": "West Ham",
+        "played": 5,
+        "won": 2,
+        "drawn": 1,
+        "lost": 2,
+        "goalsFor": 5,
+        "goalsAgainst": 7,
+        "goalDifference": -2,
+        "points": 7
+    }
+]

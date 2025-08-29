@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Erling Haaland",
+        "team": "Manchester City",
+        "position": "Forward",
+        "goals": 12,
+        "assists": 3,
+        "appearances": 5,
+        "rating": "9.2"
+    },
+    {
+        "id": 2,
+        "name": "Mohamed Salah",
+        "team": "Liverpool",
+        "position": "Forward",
+        "goals": 8,
+        "assists": 5,
+        "appearances": 5,
+        "rating": "8.7"
+    },
+    {
+        "id": 3,
+        "name": "Kevin De Bruyne",
+        "team": "Manchester City",
+        "position": "Midfielder",
+        "goals": 3,
+        "assists": 8,
+        "appearances": 5,
+        "rating": "8.9"
+    },
+    {
+        "id": 4,
+        "name": "Bukayo Saka",
+        "team": "Arsenal",
+        "position": "Forward",
+        "goals": 6,
+        "assists": 4,
+        "appearances": 5,
+        "rating": "8.5"
+    },
+    {
+        "id": 5,
+        "name": "Virgil van Dijk",
+        "team": "Liverpool",
+        "position": "Defender",
+        "goals": 1,
+        "assists": 0,
+        "appearances": 5,
+        "rating": "8.3"
+    },
+    {
+        "id": 6,
+        "name": "Bruno Fernandes",
+        "team": "Manchester United",
+        "position": "Midfielder",
+        "goals": 4,
+        "assists": 6,
+        "appearances": 5,
+        "rating": "8.4"
+    },
+    {
+        "id": 7,
+        "name": "Harry Kane",
+        "team": "Bayern Munich",
+        "position": "Forward",
+        "goals": 10,
+        "assists": 2,
+        "appearances": 4,
+        "rating": "9.0"
+    },
+    {
+        "id": 8,
+        "name": "Kylian Mbappé",
+        "team": "Real Madrid",
+        "position": "Forward",
+        "goals": 9,
+        "assists": 3,
+        "appearances": 4,
+        "rating": "8.8"
+    },
+    {
+        "id": 9,
+        "name": "Pedri",
+        "team": "Barcelona",
+        "position": "Midfielder",
+        "goals": 2,
+        "assists": 5,
+        "appearances": 4,
+        "rating": "8.2"
+    }
+]
