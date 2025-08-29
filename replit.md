@@ -1,6 +1,14 @@
 # Overview
 
-Synapse Soccer Prophet is a comprehensive football prediction and analysis web application that provides users with match predictions, league information, team standings, and player statistics. The application serves as a centralized dashboard for football data analysis, featuring a neural network-inspired branding and modern web interface.
+Synapse Soccer Prophet is a comprehensive football prediction and analysis desktop application built with Electron that provides users with match predictions, league information, team standings, and player statistics. The application serves as a centralized dashboard for football data analysis, featuring a neural network-inspired branding and modern desktop interface.
+
+## Desktop Application Features
+
+- **Native Windows Desktop App**: Built using Electron framework for cross-platform compatibility
+- **Integrated Web Server**: Self-contained Express.js server runs automatically when the app starts
+- **Desktop Menu System**: Native application menus with keyboard shortcuts
+- **Window Management**: Resizable windows with minimum size constraints
+- **Offline Capability**: All data stored locally for fast access without internet dependency
 
 # User Preferences
 
@@ -8,12 +16,19 @@ Preferred communication style: Simple, everyday language.
 
 # System Architecture
 
+## Desktop Application Architecture
+- **Electron Framework**: Cross-platform desktop app using web technologies
+- **Main Process**: Electron main.js handles window creation and app lifecycle
+- **Renderer Process**: Web application runs in Chromium-based window
+- **Integrated Server**: Express.js server starts automatically with the desktop app
+- **Native Menus**: Desktop application menus with standard shortcuts (Ctrl+R, F12, etc.)
+
 ## Frontend Architecture
 - **Static Single Page Application (SPA)**: Built with vanilla JavaScript, HTML5, and CSS3
 - **UI Framework**: Tailwind CSS for responsive design and styling
 - **Icons**: Font Awesome for consistent iconography
 - **Design Pattern**: Tab-based navigation with dynamic content rendering
-- **Responsive Design**: Mobile-first approach using CSS Grid and Flexbox
+- **Desktop Optimized**: Interface optimized for desktop window sizes
 
 ## Backend Architecture
 - **Server Framework**: Express.js (v5.1.0) serving as a lightweight REST API server

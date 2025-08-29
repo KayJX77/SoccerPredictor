@@ -16,15 +16,15 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Soccer Prophet Server"
+args = "Web Preview"
 
 [[workflows.workflow]]
-name = "Soccer Prophet Server"
+name = "Web Preview"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "npm init -y && npm install express && node server.js"
+args = "node server.js"
 waitForPort = 5000
 
 [workflows.workflow.metadata]
