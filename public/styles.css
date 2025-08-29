@@ -18,6 +18,18 @@
     display: block;
 }
 
+/* Home Banner */
+.home-banner {
+    width: 100%;
+    display: block;
+}
+
+.home-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Navigation Menu */
 .synapse-menu {
     background-color: rgb(95, 11, 133);
