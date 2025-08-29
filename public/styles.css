@@ -22,6 +22,7 @@
 .home-banner {
     width: 100%;
     display: block;
+    margin-top: 10px;
 }
 
 .home-banner img {
