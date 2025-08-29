@@ -8,162 +8,136 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 min-h-screen">
+<body class="synapse-background min-h-screen">
     <div id="app">
-        <!-- Header -->
-        <header class="bg-white shadow-lg">
-            <div class="container mx-auto px-4 py-3">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center space-x-4">
-                        <div class="synapse-logo-enhanced">
-                            <svg width="60" height="60" viewBox="0 0 120 120" class="text-purple-600">
-                                <!-- Main neural network nodes -->
-                                <circle cx="25" cy="25" r="6" fill="currentColor" class="pulse-node"/>
-                                <circle cx="60" cy="15" r="5" fill="currentColor" class="pulse-node"/>
-                                <circle cx="95" cy="25" r="6" fill="currentColor" class="pulse-node"/>
-                                <circle cx="40" cy="50" r="4" fill="currentColor" class="pulse-node"/>
-                                <circle cx="80" cy="50" r="4" fill="currentColor" class="pulse-node"/>
-                                <circle cx="30" cy="80" r="5" fill="currentColor" class="pulse-node"/>
-                                <circle cx="60" cy="90" r="6" fill="currentColor" class="pulse-node"/>
-                                <circle cx="90" cy="80" r="5" fill="currentColor" class="pulse-node"/>
-                                
-                                <!-- Enhanced neural connections -->
-                                <path d="M25 25 L60 15 M60 15 L95 25 M25 25 L40 50 M95 25 L80 50 M40 50 L30 80 M40 50 L60 90 M80 50 L60 90 M80 50 L90 80 M30 80 L60 90 M60 90 L90 80" 
-                                      stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.7" class="neural-connections"/>
-                                
-                                <!-- Outer ring for sophistication -->
-                                <circle cx="60" cy="55" r="50" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"/>
-                                <circle cx="60" cy="55" r="40" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h1 class="text-3xl font-bold text-purple-600 tracking-wider">SYNAPSE</h1>
-                            <p class="text-base font-semibold text-purple-500">SOCCER PROPHET</p>
-                            <p class="text-sm text-gray-600 font-medium">Football Prediction & Analysis Suite</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Header Banner -->
+        <header>
+            <div class="header-banner">
+                <img src="header-banner.jpg" alt="Synapse Soccer Prophet" class="w-full h-auto">
             </div>
             
-            <!-- Navigation -->
-            <nav class="bg-purple-600">
-                <div class="container mx-auto px-4">
-                    <div class="flex space-x-0">
-                        <button class="nav-tab active" data-tab="predictions">PREDICTIONS</button>
-                        <button class="nav-tab" data-tab="leagues">LEAGUES</button>
-                        <button class="nav-tab" data-tab="standings">STANDINGS</button>
-                        <button class="nav-tab" data-tab="players">PLAYER STATS</button>
-                        <button class="nav-tab" data-tab="matches">MY MATCHES</button>
-                        <button class="nav-tab" data-tab="calculators">CALCULATORS</button>
+            <!-- Navigation Menu -->
+            <nav class="synapse-menu">
+                <div class="container mx-auto">
+                    <div class="flex">
+                        <button class="menu-item active" data-tab="predictions">LEAGUES</button>
+                        <button class="menu-item" data-tab="predictions">PREDICTIONS</button>
+                        <button class="menu-item" data-tab="standings">STANDINGS</button>
+                        <button class="menu-item" data-tab="players">PLAYER STATS</button>
+                        <button class="menu-item" data-tab="matches">MY MATCHES</button>
+                        <button class="menu-item" data-tab="calculators">CALCULATORS</button>
                     </div>
                 </div>
             </nav>
         </header>
 
         <!-- Main Content -->
-        <main class="container mx-auto px-4 py-8">
-            <!-- Hero Section -->
-            <div class="hero-section mb-8">
-                <div class="enhanced-hero-gradient rounded-lg p-12 text-white relative overflow-hidden">
-                    <div class="relative z-10">
-                        <h2 class="text-5xl font-bold mb-3 tracking-wide">HYBRID A.I. DRIVEN</h2>
-                        <h3 class="text-3xl mb-4 font-light italic">Mathematical</h3>
-                        <h4 class="text-2xl font-semibold tracking-wider">FOOTBALL PREDICTION</h4>
-                    </div>
-                    <div class="absolute inset-0 opacity-25">
-                        <div class="enhanced-neural-network"></div>
-                    </div>
-                    <!-- Abstract geometric shapes -->
-                    <div class="absolute top-4 right-8 w-20 h-20 opacity-30">
-                        <svg viewBox="0 0 100 100" class="w-full h-full text-white">
-                            <polygon points="50,10 90,50 50,90 10,50" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="50" cy="50" r="15" fill="currentColor" opacity="0.5"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tab Content -->
-            <div id="predictions-content" class="tab-content active">
-                <div class="mb-6">
-                    <h3 class="text-2xl font-bold text-white mb-4">FEATURED</h3>
-                    <div id="featured-matches" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <!-- Featured matches will be loaded here -->
-                    </div>
-                </div>
-                
-                <div>
-                    <div id="all-matches" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <!-- All matches will be loaded here -->
-                    </div>
-                </div>
-            </div>
-
-            <div id="leagues-content" class="tab-content">
-                <h3 class="text-2xl font-bold text-white mb-4">LEAGUES</h3>
-                <div id="leagues-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <!-- Leagues will be loaded here -->
-                </div>
-            </div>
-
-            <div id="standings-content" class="tab-content">
-                <h3 class="text-2xl font-bold text-white mb-4">STANDINGS</h3>
-                <div id="standings-table" class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <!-- Standings will be loaded here -->
-                </div>
-            </div>
-
-            <div id="players-content" class="tab-content">
-                <h3 class="text-2xl font-bold text-white mb-4">PLAYER STATISTICS</h3>
-                <div id="players-stats" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <!-- Player stats will be loaded here -->
-                </div>
-            </div>
-
-            <div id="matches-content" class="tab-content">
-                <h3 class="text-2xl font-bold text-white mb-4">MY MATCHES</h3>
-                <div class="bg-white rounded-lg p-8 text-center">
-                    <i class="fas fa-bookmark text-6xl text-gray-300 mb-4"></i>
-                    <p class="text-gray-600">No saved matches yet. Browse predictions and save your favorites.</p>
-                </div>
-            </div>
-
-            <div id="calculators-content" class="tab-content">
-                <h3 class="text-2xl font-bold text-white mb-4">CALCULATORS</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white rounded-lg p-6">
-                        <h4 class="text-lg font-bold mb-4">Odds Calculator</h4>
-                        <div class="space-y-4">
-                            <div>
-                                <label class="block text-sm font-medium mb-1">Stake Amount</label>
-                                <input type="number" id="stake" class="w-full p-2 border rounded" placeholder="100">
+        <main class="synapse-main">
+            <!-- Content Body -->
+            <div class="content-body">
+                <div class="featured-section">
+                    <h2 class="featured-title">FEATURED</h2>
+                    
+                    <!-- Top Row -->
+                    <div class="match-grid">
+                        <div class="match-tile">
+                            <div class="match-content">
+                                <div class="vs-large">VS</div>
                             </div>
-                            <div>
-                                <label class="block text-sm font-medium mb-1">Odds</label>
-                                <input type="number" id="odds" class="w-full p-2 border rounded" placeholder="1.85" step="0.01">
+                            <div class="match-bottom">
+                                <div class="match-info">28 AUG 9:00PM</div>
+                                <div class="odds-info">ODDS: 1.16</div>
+                                <div class="star-icon"><i class="fas fa-star"></i></div>
                             </div>
-                            <button onclick="calculateWinnings()" class="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700">Calculate</button>
-                            <div id="calculator-result" class="text-lg font-bold text-purple-600"></div>
+                        </div>
+                        
+                        <div class="match-tile">
+                            <div class="match-content">
+                                <div class="vs-large">VS</div>
+                            </div>
+                            <div class="match-bottom">
+                                <div class="match-info">28 AUG 9:00PM</div>
+                                <div class="odds-info">ODDS: 1.16</div>
+                                <div class="star-icon"><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        
+                        <div class="match-tile">
+                            <div class="match-content">
+                                <div class="vs-large">VS</div>
+                            </div>
+                            <div class="match-bottom">
+                                <div class="match-info">28 AUG 9:00PM</div>
+                                <div class="odds-info">ODDS: 1.16</div>
+                                <div class="star-icon"><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        
+                        <div class="match-tile">
+                            <div class="match-content">
+                                <div class="vs-large">VS</div>
+                            </div>
+                            <div class="match-bottom">
+                                <div class="match-info">28 AUG 9:00PM</div>
+                                <div class="odds-info">ODDS: 1.16</div>
+                                <div class="star-icon"><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bottom Row -->
+                    <div class="match-grid">
+                        <div class="match-tile">
+                            <div class="match-content">
+                                <div class="vs-large">VS</div>
+                            </div>
+                            <div class="match-bottom">
+                                <div class="match-info">28 AUG 9:00PM</div>
+                                <div class="odds-info">ODDS: 1.16</div>
+                                <div class="star-icon"><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        
+                        <div class="match-tile">
+                            <div class="match-content">
+                                <div class="vs-large">VS</div>
+                            </div>
+                            <div class="match-bottom">
+                                <div class="match-info">28 AUG 9:00PM</div>
+                                <div class="odds-info">ODDS: 1.16</div>
+                                <div class="star-icon"><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        
+                        <div class="match-tile">
+                            <div class="match-content">
+                                <div class="vs-large">VS</div>
+                            </div>
+                            <div class="match-bottom">
+                                <div class="match-info">28 AUG 9:00PM</div>
+                                <div class="odds-info">ODDS: 1.16</div>
+                                <div class="star-icon"><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        
+                        <div class="match-tile">
+                            <div class="match-content">
+                                <div class="vs-large">VS</div>
+                            </div>
+                            <div class="match-bottom">
+                                <div class="match-info">28 AUG 9:00PM</div>
+                                <div class="odds-info">ODDS: 1.16</div>
+                                <div class="star-icon"><i class="fas fa-star"></i></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <!-- Sponsors Section -->
-        <div class="sponsors-section py-6">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-center items-center space-x-8 opacity-50">
-                    <div class="sponsor-logo">DUNLOP</div>
-                    <div class="sponsor-logo">GOODYEAR</div>
-                    <div class="sponsor-logo">PIRELLI</div>
-                    <div class="sponsor-logo">BRIDGESTONE</div>
-                </div>
-            </div>
-        </div>
 
         <!-- Footer -->
-        <footer class="bg-purple-900 text-white py-8">
+        <footer class="synapse-footer text-white py-8">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <div>
@@ -210,7 +184,7 @@
                     </div>
                 </div>
                 <div class="border-t border-purple-800 mt-6 pt-4 text-center text-sm">
-                    © 2025 Powered by PrestaShop™ All rights reserved
+                    © 2025 Powered by Synapse All rights reserved
                 </div>
             </div>
         </footer>

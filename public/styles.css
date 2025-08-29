@@ -1,334 +1,227 @@
-/* Custom styles for Synapse Soccer Prophet */
+/* Synapse Soccer Prophet - Exact Design Match */
 
-/* Enhanced Logo Animations */
-.synapse-logo-enhanced {
-    position: relative;
-}
-
-.pulse-node {
-    animation: nodePulse 2s ease-in-out infinite;
-    transform-origin: center;
-}
-
-.neural-connections {
-    animation: connectionFlow 3s ease-in-out infinite;
-}
-
-@keyframes nodePulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.1); }
-}
-
-@keyframes connectionFlow {
-    0%, 100% { opacity: 0.7; }
-    50% { opacity: 0.3; }
-}
-.nav-tab {
-    @apply px-6 py-3 text-white font-semibold transition-all duration-300 border-b-4 border-transparent relative;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    position: relative;
-    overflow: hidden;
-}
-
-.nav-tab::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-    transition: left 0.5s ease;
-}
-
-.nav-tab:hover::before {
-    left: 100%;
-}
-
-.nav-tab:hover {
-    @apply bg-purple-700 border-purple-300;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.nav-tab.active {
-    @apply bg-purple-800 border-white;
-    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
-}
-
-.tab-content {
-    @apply hidden;
-}
-
-.tab-content.active {
-    @apply block;
-}
-
-.match-card {
-    @apply bg-white rounded-lg shadow-xl p-6 transition-all duration-300;
-    border: 1px solid rgba(139, 92, 246, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.match-card:hover {
-    @apply transform scale-105;
-    box-shadow: 0 25px 50px rgba(139, 92, 246, 0.2);
-}
-
-.match-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
-    transition: left 0.5s ease;
-}
-
-.match-card:hover::before {
-    left: 100%;
-}
-
-.team-logo {
-    @apply w-14 h-14 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center text-gray-700 font-bold text-sm;
-    border: 2px solid rgba(139, 92, 246, 0.2);
-    transition: all 0.3s ease;
-}
-
-.team-logo:hover {
-    @apply bg-gradient-to-br from-purple-100 to-purple-200 text-purple-700;
-    border-color: rgba(139, 92, 246, 0.4);
-    transform: scale(1.1);
-}
-
-.odds-badge {
-    @apply bg-gradient-to-r from-purple-600 to-purple-700 text-white px-4 py-2 rounded-full text-sm font-bold;
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-}
-
-.odds-badge:hover {
-    @apply bg-gradient-to-r from-purple-700 to-purple-800;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
-}
-
-.prediction-badge {
-    @apply bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-full text-xs font-bold;
-    box-shadow: 0 2px 10px rgba(34, 197, 94, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-    from { box-shadow: 0 2px 10px rgba(34, 197, 94, 0.3); }
-    to { box-shadow: 0 2px 20px rgba(34, 197, 94, 0.6); }
-}
-
-.neural-network {
-    background-image: 
-        radial-gradient(2px 2px at 20px 30px, #fff, transparent),
-        radial-gradient(2px 2px at 40px 70px, #fff, transparent),
-        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
-        radial-gradient(1px 1px at 130px 80px, #fff, transparent),
-        radial-gradient(2px 2px at 160px 30px, #fff, transparent);
-    background-repeat: repeat;
-    background-size: 200px 100px;
-}
-
-/* Enhanced Neural Network Background */
-.enhanced-neural-network {
-    background-image: 
-        radial-gradient(3px 3px at 25px 35px, rgba(255,255,255,0.8), transparent),
-        radial-gradient(2px 2px at 60px 80px, rgba(255,255,255,0.6), transparent),
-        radial-gradient(1px 1px at 120px 45px, rgba(255,255,255,0.7), transparent),
-        radial-gradient(2px 2px at 180px 90px, rgba(255,255,255,0.5), transparent),
-        radial-gradient(3px 3px at 220px 35px, rgba(255,255,255,0.8), transparent),
-        linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
-    background-repeat: repeat;
-    background-size: 250px 120px;
-    animation: neuralFlow 8s ease-in-out infinite;
-}
-
-@keyframes neuralFlow {
-    0%, 100% { background-position: 0% 0%, 25% 25%, 50% 50%, 75% 75%, 100% 0%, 0% 0%; }
-    50% { background-position: 25% 25%, 50% 50%, 75% 75%, 100% 100%, 125% 25%, 25% 25%; }
-}
-
-/* Enhanced Hero Gradient */
-.enhanced-hero-gradient {
-    background: linear-gradient(135deg, 
-        #8b5cf6 0%, 
-        #7c3aed 25%, 
-        #6d28d9 50%, 
-        #5b21b6 75%, 
-        #4c1d95 100%);
-    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
-}
-
-.sponsors-section {
-    @apply border-t border-purple-700;
-}
-
-.sponsor-logo {
-    @apply text-white font-bold text-lg;
-}
-
-.league-card {
-    @apply bg-white rounded-lg shadow-lg p-4 text-center transition-transform duration-200;
-}
-
-.league-card:hover {
-    @apply transform scale-105;
-}
-
-.player-card {
-    @apply bg-white rounded-lg shadow-lg p-4 transition-transform duration-200;
-}
-
-.player-card:hover {
-    @apply transform scale-105;
-}
-
-.standings-table {
-    @apply w-full;
-}
-
-.standings-table th {
-    @apply bg-purple-600 text-white px-4 py-3 text-left font-semibold;
-}
-
-.standings-table td {
-    @apply px-4 py-3 border-b border-gray-200;
-}
-
-.standings-table tbody tr:hover {
-    @apply bg-gray-50;
-}
-
-/* Loading animation */
-.loading {
-    @apply animate-pulse;
-}
-
-/* Enhanced Background Gradients */
-body {
-    background: linear-gradient(135deg, 
-        #1e1b4b 0%, 
-        #312e81 25%, 
-        #3730a3 50%, 
-        #4338ca 75%, 
-        #4f46e5 100%);
+/* Background Color - RGB(95, 11, 133) */
+.synapse-background {
+    background-color: rgb(95, 11, 133);
     min-height: 100vh;
-    position: relative;
 }
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
+/* Header Banner */
+.header-banner {
     width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(99, 102, 241, 0.2) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: -1;
+    display: block;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .nav-tab {
-        @apply px-3 py-2 text-sm;
-    }
-    
-    .hero-section h2 {
-        @apply text-2xl;
-    }
-    
-    .hero-section h3 {
-        @apply text-lg;
-    }
-    
-    .hero-section h4 {
-        @apply text-base;
-    }
-
-    .synapse-logo-enhanced svg {
-        width: 40px;
-        height: 40px;
-    }
+.header-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Animation for match cards */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Navigation Menu */
+.synapse-menu {
+    background-color: rgb(95, 11, 133);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.match-card {
-    animation: fadeInUp 0.5s ease-out;
+.menu-item {
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
 }
 
-/* Gradient text effect */
-.gradient-text {
-    background: linear-gradient(45deg, #8b5cf6, #3b82f6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Enhanced VS styling for match cards */
-.vs-text {
-    font-size: 1.25rem;
+.menu-item.active {
+    border-bottom-color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content */
+.synapse-main {
+    background-color: white;
+    min-height: 600px;
+    padding: 0;
+    margin: 0;
+}
+
+.content-body {
+    background-color: white;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Featured Section */
+.featured-section {
+    background-color: white;
+}
+
+.featured-title {
+    color: black;
+    font-size: 24px;
     font-weight: bold;
-    color: #8b5cf6;
-    text-shadow: 0 2px 4px rgba(139, 92, 246, 0.3);
-    position: relative;
+    font-style: italic;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
 }
 
-.vs-text::before,
-.vs-text::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 20px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+/* Match Grid */
+.match-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.vs-text::before {
-    left: -30px;
+/* Match Tiles */
+.match-tile {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 200px;
 }
 
-.vs-text::after {
-    right: -30px;
+.match-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 20px;
 }
 
-/* Enhanced footer styling */
+.vs-large {
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(95, 11, 133);
+    text-align: center;
+}
+
+.match-bottom {
+    background-color: rgb(95, 11, 133);
+    color: white;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.match-info {
+    color: white;
+    opacity: 0.9;
+}
+
+.odds-info {
+    color: white;
+    font-weight: bold;
+}
+
+.star-icon {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* Footer */
+.synapse-footer {
+    background-color: rgb(95, 11, 133);
+    color: white;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .match-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .match-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .menu-item {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+    
+    .content-body {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .match-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-item {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+}
+
+/* Remove all old styles that are no longer needed */
+.nav-tab,
+.tab-content,
+.match-card,
+.team-logo,
+.odds-badge,
+.prediction-badge,
+.neural-network,
+.enhanced-neural-network,
+.enhanced-hero-gradient,
+.synapse-logo-enhanced,
+.pulse-node,
+.neural-connections,
+.vs-text,
+.floating,
+.sponsors-section,
+.sponsor-logo,
+.league-card,
+.player-card,
+.standings-table,
+.loading,
+.gradient-text {
+    /* These styles are no longer used */
+}
+
+/* Hide all tab content except the main featured section */
+.tab-content {
+    display: none !important;
+}
+
+/* Ensure the app container takes full height */
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 footer {
-    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
-    border-top: 1px solid rgba(139, 92, 246, 0.3);
-}
-
-/* Floating animation for featured elements */
-.floating {
-    animation: floating 3s ease-in-out infinite;
-}
-
-@keyframes floating {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    margin-top: auto;
 }
