@@ -1,14 +1,60 @@
 /* Custom styles for Synapse Soccer Prophet */
+
+/* Enhanced Logo Animations */
+.synapse-logo-enhanced {
+    position: relative;
+}
+
+.pulse-node {
+    animation: nodePulse 2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.neural-connections {
+    animation: connectionFlow 3s ease-in-out infinite;
+}
+
+@keyframes nodePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+@keyframes connectionFlow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0.3; }
+}
 .nav-tab {
-    @apply px-6 py-3 text-white font-semibold transition-colors duration-200 border-b-4 border-transparent;
+    @apply px-6 py-3 text-white font-semibold transition-all duration-300 border-b-4 border-transparent relative;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-tab:hover::before {
+    left: 100%;
 }
 
 .nav-tab:hover {
     @apply bg-purple-700 border-purple-300;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .nav-tab.active {
     @apply bg-purple-800 border-white;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
 }
 
 .tab-content {
@@ -20,23 +66,67 @@
 }
 
 .match-card {
-    @apply bg-white rounded-lg shadow-lg p-6 transition-transform duration-200;
+    @apply bg-white rounded-lg shadow-xl p-6 transition-all duration-300;
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
 .match-card:hover {
     @apply transform scale-105;
+    box-shadow: 0 25px 50px rgba(139, 92, 246, 0.2);
+}
+
+.match-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+    transition: left 0.5s ease;
+}
+
+.match-card:hover::before {
+    left: 100%;
 }
 
 .team-logo {
-    @apply w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 font-bold;
+    @apply w-14 h-14 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center text-gray-700 font-bold text-sm;
+    border: 2px solid rgba(139, 92, 246, 0.2);
+    transition: all 0.3s ease;
+}
+
+.team-logo:hover {
+    @apply bg-gradient-to-br from-purple-100 to-purple-200 text-purple-700;
+    border-color: rgba(139, 92, 246, 0.4);
+    transform: scale(1.1);
 }
 
 .odds-badge {
-    @apply bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold;
+    @apply bg-gradient-to-r from-purple-600 to-purple-700 text-white px-4 py-2 rounded-full text-sm font-bold;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.odds-badge:hover {
+    @apply bg-gradient-to-r from-purple-700 to-purple-800;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
 }
 
 .prediction-badge {
-    @apply bg-green-500 text-white px-2 py-1 rounded text-xs font-bold;
+    @apply bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-full text-xs font-bold;
+    box-shadow: 0 2px 10px rgba(34, 197, 94, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 2px 10px rgba(34, 197, 94, 0.3); }
+    to { box-shadow: 0 2px 20px rgba(34, 197, 94, 0.6); }
 }
 
 .neural-network {
@@ -48,6 +138,36 @@
         radial-gradient(2px 2px at 160px 30px, #fff, transparent);
     background-repeat: repeat;
     background-size: 200px 100px;
+}
+
+/* Enhanced Neural Network Background */
+.enhanced-neural-network {
+    background-image: 
+        radial-gradient(3px 3px at 25px 35px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(2px 2px at 60px 80px, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 120px 45px, rgba(255,255,255,0.7), transparent),
+        radial-gradient(2px 2px at 180px 90px, rgba(255,255,255,0.5), transparent),
+        radial-gradient(3px 3px at 220px 35px, rgba(255,255,255,0.8), transparent),
+        linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+    background-repeat: repeat;
+    background-size: 250px 120px;
+    animation: neuralFlow 8s ease-in-out infinite;
+}
+
+@keyframes neuralFlow {
+    0%, 100% { background-position: 0% 0%, 25% 25%, 50% 50%, 75% 75%, 100% 0%, 0% 0%; }
+    50% { background-position: 25% 25%, 50% 50%, 75% 75%, 100% 100%, 125% 25%, 25% 25%; }
+}
+
+/* Enhanced Hero Gradient */
+.enhanced-hero-gradient {
+    background: linear-gradient(135deg, 
+        #8b5cf6 0%, 
+        #7c3aed 25%, 
+        #6d28d9 50%, 
+        #5b21b6 75%, 
+        #4c1d95 100%);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
 }
 
 .sponsors-section {
@@ -95,6 +215,33 @@
     @apply animate-pulse;
 }
 
+/* Enhanced Background Gradients */
+body {
+    background: linear-gradient(135deg, 
+        #1e1b4b 0%, 
+        #312e81 25%, 
+        #3730a3 50%, 
+        #4338ca 75%, 
+        #4f46e5 100%);
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(99, 102, 241, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .nav-tab {
@@ -111,6 +258,11 @@
     
     .hero-section h4 {
         @apply text-base;
+    }
+
+    .synapse-logo-enhanced svg {
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -136,4 +288,47 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* Enhanced VS styling for match cards */
+.vs-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #8b5cf6;
+    text-shadow: 0 2px 4px rgba(139, 92, 246, 0.3);
+    position: relative;
+}
+
+.vs-text::before,
+.vs-text::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
+}
+
+.vs-text::before {
+    left: -30px;
+}
+
+.vs-text::after {
+    right: -30px;
+}
+
+/* Enhanced footer styling */
+footer {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+    border-top: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* Floating animation for featured elements */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
 }

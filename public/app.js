@@ -98,14 +98,14 @@ class SynapseApp {
         }
 
         container.innerHTML = matches.map(match => `
-            <div class="match-card">
+            <div class="match-card floating">
                 <div class="flex items-center justify-between mb-4">
                     <div class="team-logo">
                         ${match.homeTeam.substring(0, 3).toUpperCase()}
                     </div>
-                    <div class="text-center">
-                        <div class="text-lg font-bold text-purple-600">VS</div>
-                        <div class="text-xs text-gray-500">${match.date}</div>
+                    <div class="text-center relative">
+                        <div class="vs-text">VS</div>
+                        <div class="text-xs text-gray-500 mt-1">${match.date}</div>
                         <div class="text-xs text-gray-500">${match.time}</div>
                     </div>
                     <div class="team-logo">
@@ -113,28 +113,30 @@ class SynapseApp {
                     </div>
                 </div>
                 
-                <div class="text-center mb-3">
-                    <div class="text-sm font-medium">${match.homeTeam}</div>
-                    <div class="text-xs text-gray-500">vs</div>
-                    <div class="text-sm font-medium">${match.awayTeam}</div>
+                <div class="text-center mb-4">
+                    <div class="text-sm font-semibold text-gray-800">${match.homeTeam}</div>
+                    <div class="text-xs text-gray-400 font-medium my-1">versus</div>
+                    <div class="text-sm font-semibold text-gray-800">${match.awayTeam}</div>
                 </div>
 
                 ${match.prediction ? `
-                <div class="text-center mb-3">
+                <div class="text-center mb-4">
                     <span class="prediction-badge">${match.prediction}</span>
                 </div>
                 ` : ''}
 
-                <div class="flex justify-center">
+                <div class="flex justify-center mb-3">
                     <span class="odds-badge">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-chart-line mr-1"></i>
                         ODDS: ${match.odds}
                     </span>
                 </div>
 
-                <div class="text-center mt-2">
-                    <div class="text-xs text-gray-500">${match.league}</div>
-                    ${match.confidence ? `<div class="text-xs text-green-600">Confidence: ${match.confidence}%</div>` : ''}
+                <div class="text-center">
+                    <div class="text-xs text-gray-500 font-medium">${match.league}</div>
+                    ${match.confidence ? `<div class="text-xs text-green-600 font-semibold mt-1">
+                        <i class="fas fa-star mr-1"></i>Confidence: ${match.confidence}%
+                    </div>` : ''}
                 </div>
             </div>
         `).join('');
