@@ -261,3 +261,7 @@
 footer {
     margin-top: auto;
 }
+
+.tab-section.hidden {
+    display: none;
+}
